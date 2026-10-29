@@ -4,17 +4,17 @@ namespace Domain.interfrances;
 
 public interface IProductRepository
 {
-    void AddProduct(Product products);
-    void UpdateProduct(Product products);
-    void DeleteProduct(int id);
-    Product GetProduct(int id);
-    List<Product> GetProducts();
-    List<Product> GetProductsByCategory(string name);
-    List<Product> GetProductsByCategory(int categoryId);
-    int GetAmountOfProducts();
-    int GetAmountOfProductsByCategory(int categoryId);
-    decimal GetMinPriceOfProductByCategory(int categoryId);
-    decimal GetMaxPriceOfProductByCategory(int categoryId);
-    decimal GetAveragePriceOfProductByCategory(int categoryId);
-    decimal GetTotalPriceOfProducts();
+    Task AddProduct(Product products);
+    Task UpdateProduct(Product products);
+    Task DeleteProduct(int id);
+    Task<Product> GetProduct(int id);
+    Task<List<Product>> GetProducts();
+    Task<List<Product>> GetProductsByCategory(string name);
+    Task<List<Product>> GetProductsByCategory(int categoryId);
+    Task<int> GetAmountOfProducts();
+    Task<int> GetAmountOfProductsByCategory(int categoryId);
+    Task<decimal> GetMinPriceOfProductByCategory(int categoryId);
+    Task<decimal> GetMaxPriceOfProductByCategory(int categoryId);
+    Task<decimal> GetAveragePriceOfProductByCategory(int categoryId);
+    Task<decimal> GetTotalPriceOfProducts();
 }

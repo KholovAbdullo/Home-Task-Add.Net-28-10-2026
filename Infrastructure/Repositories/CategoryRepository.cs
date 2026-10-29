@@ -7,54 +7,54 @@ namespace Infrastructure.Repositories;
 
 public class CategoryRepository : ICategoryRepository
 {
-    public void AddCategory(Category category)
+    public async Task AddCategory(Category category)
     {
         using var conn=Database.Connection();
         conn.Open();
         var query="insert into Category(name) values(@name)";
-        conn.Execute(query,new{category.Name});
+        await conn.ExecuteAsync(query,new{category.Name});
     }
 
-    public void DeleteCategory(int id)
+    public async Task DeleteCategory(int id)
     {
         using var conn=Database.Connection();
         conn.Open();
         var query="delete from Category where id=@id";
-        conn.Execute(query,new{id});
+        await conn.ExecuteAsync(query,new{id});
     }
 
-    public int GetAmountOfCategories()
+    public async Task<int> GetAmountOfCategories()
     {
         using var conn=Database.Connection();
         conn.Open();
         var query="select count(*) from Category";
-        var amount=conn.QuerySingle<int>(query);
+        var amount=await conn.ExecuteScalarAsync<int>(query);
         return amount;
     }
 
-    public List<Category> GetCategories()
+    public async Task<List<Category>> GetCategories()
     {
         using var conn=Database.Connection();
         conn.Open();
-        var query=conn.Query<Category>("select * from Category");
+        var query=await conn.QueryAsync<Category>("select * from Category");
         return query.ToList();
     }
 
-    public Category GetCategory(int id)
+    public async Task<Category> GetCategory(int id)
     {
         using var conn=Database.Connection();
         conn.Open();
         var query="select * from Category where id=@id";
-        var category=conn.QuerySingle<Category>(query,new{id});
+        var category=await conn.QuerySingleAsync<Category>(query,new{id});
         return category;
     }
 
-    public void UpdateCategory(Category category)
+    public async Task UpdateCategory(Category category)
     {
         using var conn=Database.Connection();
         conn.Open();
         var query="update Category set name=@name where id=@id";
-        conn.Execute(query,category);
+        await conn.ExecuteAsync(query,category);
     }
 
 }

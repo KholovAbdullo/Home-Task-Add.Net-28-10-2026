@@ -38,7 +38,7 @@ while (true)
         switch (a)
     {
         case "1":
-            var products = re.GetProducts();
+            var products = await re.GetProducts();
             foreach (var item in products)
             {
                 Console.WriteLine($"{item.Id} | {item.Name} | {item.Price} | {item.categoryId}");
@@ -48,7 +48,7 @@ while (true)
         case "2":
             Console.Write("Enter product id: ");
             var id = Convert.ToInt32(Console.ReadLine());
-            var product = re.GetProduct(id);
+            var product = await re.GetProduct(id);
             Console.WriteLine($"{product.Id} | {product.Name} | {product.Price} | {product.categoryId}");
             break;
 
@@ -65,7 +65,7 @@ while (true)
                 Price = price,
                 categoryId= categoryId
             };
-            re.AddProduct(product1);
+            await re.AddProduct(product1);
             break;
 
         case "4":
@@ -84,19 +84,19 @@ while (true)
                 Price = pricee,
                 categoryId = categoryIdd
             };
-            re.UpdateProduct(product2);
+            await re.UpdateProduct(product2);
             break;
 
         case "5":
             Console.Write("Enter product id: ");
             var i = Convert.ToInt32(Console.ReadLine());
-            re.DeleteProduct(i);
+            await re.DeleteProduct(i);
             break;
 
         case "6":
             Console.Write("Enter category name: ");
             var categoryName = Console.ReadLine()!;
-            var products1 = re.GetProductsByCategory(categoryName);
+            var products1 = await re.GetProductsByCategory(categoryName);
             foreach (var item in products1)
             {
                 Console.WriteLine($"{item.Id} | {item.Name} | {item.Price}");
@@ -106,7 +106,7 @@ while (true)
         case "7":
             Console.Write("Enter category id: ");
             var categoryId1 = Convert.ToInt32(Console.ReadLine());
-            var products2 = re.GetProductsByCategory(categoryId1);
+            var products2 = await re.GetProductsByCategory(categoryId1);
             foreach (var item in products2)
             {
                 Console.WriteLine($"{item.Id} | {item.Name} | {item.Price}");
@@ -114,45 +114,45 @@ while (true)
             break;
 
         case "8":
-            var productAmount = re.GetAmountOfProducts();
+            var productAmount = await re.GetAmountOfProducts();
             Console.WriteLine($"Products amount: {productAmount}");
             break;
 
         case "9":
             Console.Write("Enter category id: ");
             var categoryId2 = Convert.ToInt32(Console.ReadLine());
-            var amount = re.GetAmountOfProductsByCategory(categoryId2);
+            var amount = await re.GetAmountOfProductsByCategory(categoryId2);
             Console.WriteLine($"Products amount: {amount}");
             break;
 
         case "10":
             Console.Write("Enter category id: ");
             var categoryId3 = Convert.ToInt32(Console.ReadLine());
-            var min = re.GetMinPriceOfProductByCategory(categoryId3);
+            var min = await re.GetMinPriceOfProductByCategory(categoryId3);
             Console.WriteLine($"Min price: {min}");
             break;
 
         case "11":
             Console.Write("Enter category id: ");
             var categoryId4 = Convert.ToInt32(Console.ReadLine());
-            var max = re.GetMaxPriceOfProductByCategory(categoryId4);
+            var max = await re.GetMaxPriceOfProductByCategory(categoryId4);
             Console.WriteLine($"Max price: {max}");
             break;
 
         case "12":
             Console.Write("Enter category id: ");
             var categoryId5 = Convert.ToInt32(Console.ReadLine());
-            var avg = re.GetAveragePriceOfProductByCategory(categoryId5);
+            var avg = await re.GetAveragePriceOfProductByCategory(categoryId5);
             Console.WriteLine($"Average price: {avg}");
             break;
 
         case "13":
-            var total = re.GetTotalPriceOfProducts();
+            var total = await re.GetTotalPriceOfProducts();
             Console.WriteLine($"Total price: {total}");
             break;
 
         case "14":
-            var categories = ca.GetCategories();
+            var categories = await ca.GetCategories();
             foreach (var item in categories)
             {
                 Console.WriteLine($"{item.Id} | {item.Name}");
@@ -162,7 +162,7 @@ while (true)
         case "15":
             Console.Write("Enter category id: ");
             var idi = Convert.ToInt32(Console.ReadLine());
-            var category = ca.GetCategory(idi);
+            var category = await ca.GetCategory(idi);
             Console.WriteLine($"{category.Id} | {category.Name}");
             break;
 
@@ -173,7 +173,7 @@ while (true)
             {
                 Name = categoryName1
             };
-            ca.AddCategory(category1);
+            await ca.AddCategory(category1);
             break;
 
         case "17":
@@ -186,17 +186,17 @@ while (true)
                 Id = idii,
                 Name = categoryName2
             };
-            ca.UpdateCategory(category2);
+            await ca.UpdateCategory(category2);
             break;
 
         case "18":
             Console.Write("Enter category id: ");
             var idiii = Convert.ToInt32(Console.ReadLine());
-            ca.DeleteCategory(idiii);
+            await ca.DeleteCategory(idiii);
             break;
 
         case "19":
-            var categoriesAmount = ca.GetAmountOfCategories();
+            var categoriesAmount = await ca.GetAmountOfCategories();
             Console.WriteLine($"Categories amount: {categoriesAmount}");
             break;
 
