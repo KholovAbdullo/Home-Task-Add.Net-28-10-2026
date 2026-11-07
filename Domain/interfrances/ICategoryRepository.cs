@@ -4,10 +4,9 @@ namespace Domain.interfrances;
 
 public interface ICategoryRepository
 {
-    Task AddCategory(Category category);
-    Task UpdateCategory(Category category);
-    Task DeleteCategory(int id);
+    Task<bool> AddCategory(Category category);
+    Task<bool> UpdateCategory(Category category);
+    Task<bool> DeleteCategory(int id);
     Task<Category> GetCategory(int id);
     Task<List<Category>> GetCategories();
-    Task<int> GetAmountOfCategories();
 }
