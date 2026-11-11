@@ -1,6 +1,5 @@
-using Application.DTOs;
+using Application.DTOs.Product;
 using Application.Responses;
-using Domain.Models;
 
 namespace Application.Interfaces;
 
