@@ -1,4 +1,5 @@
 using System.Net;
+using Application.DTOs;
 using Application.Interfaces;
 using Application.Responses;
 using Domain.interfrances;
@@ -10,42 +11,80 @@ public class CategoryService(ICategoryRepository categoryRepository):ICategorySe
 {
     private ICategoryRepository categoryRepository1 = categoryRepository;
 
-    public async Task<ApiResponse<bool>> AddCategory(Category category)
+    public async Task<ApiResponse<bool>> AddCategory(CreateCategoryDto categoryDto)
     {
+        var category = new Category()
+        {
+            Name=categoryDto.Name
+        };
+
         var res = await categoryRepository1.AddCategory(category);
-        return res==true
-        ? new ApiResponse<bool>(HttpStatusCode.OK,"Added!",res)
-        : new ApiResponse<bool>(HttpStatusCode.InternalServerError,"Not added!",res);
+
+        return res == true
+        ? new ApiResponse<bool>(HttpStatusCode.OK, "Added!", res)
+        : new ApiResponse<bool>(HttpStatusCode.InternalServerError, "Error Added!", res);
     }
 
     public async Task<ApiResponse<bool>> DeleteCategory(int id)
     {
         var res = await categoryRepository1.DeleteCategory(id);
         return res==true
-        ? new ApiResponse<bool>(HttpStatusCode.OK,"Delete!",res)
-        : new ApiResponse<bool>(HttpStatusCode.InternalServerError,"Not Delete!",res);
+        ? new ApiResponse<bool>(HttpStatusCode.OK, "Delete!", res)
+        : new ApiResponse<bool>(HttpStatusCode.InternalServerError, "Error Delete!", res);
     }
 
-    public async Task<ApiResponse<List<Category>>> GetCategories()
+    public async Task<ApiResponse<CategoryStatisticDto>> GetAmountOfCategories()
+    {
+        var amount = await categoryRepository1.GetAmountOfCategories();
+        var res = new CategoryStatisticDto()
+        {
+            AmountOfCategories=amount
+        };
+
+        return new ApiResponse<CategoryStatisticDto>(HttpStatusCode.OK, "Category Statistic!", res);
+    }
+
+    public async Task<ApiResponse<List<CategoryDto>>> GetCategories()
     {
         var res = await categoryRepository1.GetCategories();
-        return new ApiResponse<List<Category>>(HttpStatusCode.OK, "Book id.",res);
+        var category = res.Select(c=>new CategoryDto
+        {
+            Id=c.Id,
+            Name=c.Name
+        }).ToList();
+
+        return new ApiResponse<List<CategoryDto>>(HttpStatusCode.OK, "List Category!", category);
     }
 
-    public async Task<ApiResponse<Category>> GetCategory(int id)
+    public async Task<ApiResponse<CategoryDto>> GetCategory(int id)
     {
         var res = await categoryRepository1.GetCategory(id);
-        return res !=null
-        ? new ApiResponse<Category>(HttpStatusCode.OK, "Category id!",res)
-        : new ApiResponse<Category>(HttpStatusCode.NotFound, "Not Category id!",res!);
+        if (res == null)
+        {
+            return new ApiResponse<CategoryDto>(HttpStatusCode.NotFound, "Category not faund!", null!);
+        }
+
+        var category = new CategoryDto()
+        {
+            Id=res.Id,
+            Name=res.Name
+        };
+
+        return new ApiResponse<CategoryDto>(HttpStatusCode.OK, "Category!", category);
     }
 
-    public async Task<ApiResponse<bool>> UpdateCategory(Category category)
+    public async Task<ApiResponse<bool>> UpdateCategory(UpdateCategoryDto categoryDto)
     {
+        var category = new Category()
+        {
+            Id=categoryDto.Id,
+            Name=categoryDto.Name
+        };
+
         var res = await categoryRepository1.UpdateCategory(category);
-        return res==true
-        ? new ApiResponse<bool>(HttpStatusCode.OK,"Update!",res)
-        : new ApiResponse<bool>(HttpStatusCode.InternalServerError,"Not Update!",res);
+        return res == true
+        ? new ApiResponse<bool>(HttpStatusCode.OK, "Update!", res)
+        : new ApiResponse<bool>(HttpStatusCode.InternalServerError, "Error Update!", res);
     }
 
 }

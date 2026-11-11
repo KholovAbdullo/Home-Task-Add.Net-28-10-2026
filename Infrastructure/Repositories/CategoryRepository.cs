@@ -26,6 +26,16 @@ public class CategoryRepository(Database database) : ICategoryRepository
         return res>0;
     }
 
+    public async Task<int> GetAmountOfCategories()
+    {
+        using var conn = dabase.Connection();
+        conn.Open();
+        var query="select count(*) from Category";
+        var res = await conn.ExecuteScalarAsync<int>(query);
+        return res;
+    }
+
+
     public async Task<List<Category>> GetCategories()
     {
         using var conn=dabase.Connection();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Application\\Application.csproj": {
+    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Application\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -27,8 +27,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj"
+              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj"
               }
             }
           }
@@ -343,14 +343,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj": {
+    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -678,14 +678,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -701,8 +701,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Domain\\Domain.csproj"
+              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Domain\\Domain.csproj"
               }
             }
           }
@@ -1027,14 +1027,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1050,11 +1050,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Application\\Application.csproj"
+              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Application\\Application.csproj"
               },
-              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

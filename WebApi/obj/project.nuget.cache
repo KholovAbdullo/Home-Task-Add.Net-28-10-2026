@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1CI2HeLCJ1g=",
+  "dgSpecHash": "s5ILH/u6i8Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\Day2\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Net1moh\\Ado.Net\\haftai4\\MiniShop\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\dapper\\2.1.89\\dapper.2.1.89.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.10\\microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",

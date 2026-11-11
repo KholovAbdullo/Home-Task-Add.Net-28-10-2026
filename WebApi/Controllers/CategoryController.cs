@@ -1,3 +1,4 @@
+using Application.DTOs;
 using Application.Interfaces;
 using Application.Responses;
 using Domain.Models;
@@ -12,40 +13,38 @@ public class CategoryController(ICategoryService categoryService) : ControllerBa
     private ICategoryService categoryService1 = categoryService;
 
     [HttpPost]
-    public async Task<ApiResponse<bool>> AddCategory(Category category)
+    public async Task<ApiResponse<bool>> AddCategory(CreateCategoryDto categoryDto)
     {
-        return await categoryService1.AddCategory(category);
+        return await categoryService1.AddCategory(categoryDto);  
     }
 
     [HttpPut]
-    public async Task<ApiResponse<bool>> UpdateCategory(Category category)
+    public async Task<ApiResponse<bool>> UpdateCategory(UpdateCategoryDto categoryDto)
     {
-        return await categoryService1.UpdateCategory(category);
+        return await categoryService1.UpdateCategory(categoryDto);
     }
 
     [HttpDelete]
     public async Task<ApiResponse<bool>> DeleteCategory(int id)
     {
         return await categoryService1.DeleteCategory(id);
-        
     }
 
     [HttpGet("{id:int}")]
-    public async Task<ApiResponse<Category>> GetCategory(int id)
+    public async Task<ApiResponse<CategoryDto>> GetCategory(int id)
     {
-        var res = await categoryService1.GetCategory(id);
-
-        if (res == null)
-        {
-            return null!;
-        }
-
-        return res;
+        return await categoryService1.GetCategory(id);
     }
 
     [HttpGet]
-    public async Task<ApiResponse<List<Category>>> GetCategories()
+    public async Task<ApiResponse<List<CategoryDto>>> GetCategories()
     {
         return await categoryService1.GetCategories();
+    }
+
+    [HttpGet("amount")]
+    public async Task<ApiResponse<CategoryStatisticDto>> GetAmountOfCategories()
+    {
+        return await categoryService1.GetAmountOfCategories();
     }
 }
