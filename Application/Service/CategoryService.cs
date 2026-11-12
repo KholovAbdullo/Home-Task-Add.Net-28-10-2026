@@ -73,15 +73,14 @@ public class CategoryService(ICategoryRepository categoryRepository):ICategorySe
         return new ApiResponse<CategoryDto>(HttpStatusCode.OK, "Category!", category);
     }
 
-    public async Task<ApiResponse<bool>> UpdateCategory(UpdateCategoryDto categoryDto)
+    public async Task<ApiResponse<bool>> UpdateCategory(int id,UpdateCategoryDto categoryDto)
     {
         var category = new Category()
         {
-            Id=categoryDto.Id,
             Name=categoryDto.Name
         };
 
-        var res = await categoryRepository1.UpdateCategory(category);
+        var res = await categoryRepository1.UpdateCategory(id,category);
         return res == true
         ? new ApiResponse<bool>(HttpStatusCode.OK, "Update!", res)
         : new ApiResponse<bool>(HttpStatusCode.InternalServerError, "Error Update!", res);

@@ -3,6 +3,7 @@ using Application.Service;
 using Domain.interfrances;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
+using WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,4 +28,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+app.UseMiddleware<RequestLoggingMiddleware>();
 app.Run();

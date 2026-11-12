@@ -107,12 +107,12 @@ public class ProductRepository(Database database) : IProductRepository
     }
 
 
-    public async Task<bool> UpdateProduct(Product products)
+    public async Task<bool> UpdateProduct(int id,Product products)
     {
         using var conn=database1.Connection();
         conn.Open();
         var query = "update Product set categor_id=@categoryId,name=@Name,price=@Price where id=@Id";
-        var res = await conn.ExecuteAsync(query, products);
+        var res = await conn.ExecuteAsync(query, new {id,products.categoryId,products.Name,products.Price});
         return res>0;
     }
 }

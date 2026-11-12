@@ -147,17 +147,16 @@ public class ProductService(IProductRepository productRepository):IProductServic
         return new ApiResponse<ProductStatisticDto>(HttpStatusCode.OK, "Total Product!", product);
     }
 
-    public async Task<ApiResponse<bool>> UpdateProduct(UpdateProductDto productDto)
+    public async Task<ApiResponse<bool>> UpdateProduct(int id,UpdateProductDto productDto)
     {
         var produc = new Product()
         {
-            Id=productDto.Id,
             Name=productDto.Name,
             Price=productDto.Price,
             categoryId=productDto.CategoryId
         };
 
-        var res = await productRepository1.UpdateProduct(produc);
+        var res = await productRepository1.UpdateProduct(id,produc);
 
         return res == true
         ? new ApiResponse<bool>(HttpStatusCode.OK, "Update!", res)

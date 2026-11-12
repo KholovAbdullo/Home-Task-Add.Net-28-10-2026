@@ -6,7 +6,7 @@ namespace Application.Interfaces;
 public interface IProductService
 {
     Task<ApiResponse<bool>> AddProduct(CreateProductDto productDto);
-    Task<ApiResponse<bool>> UpdateProduct(UpdateProductDto productDto);
+    Task<ApiResponse<bool>> UpdateProduct(int id,UpdateProductDto productDto);
     Task<ApiResponse<bool>> DeleteProduct(int id);
     Task<ApiResponse<ProductDto>> GetProduct(int id);
     Task<ApiResponse<List<ProductDto>>> GetProducts();

@@ -53,12 +53,12 @@ public class CategoryRepository(Database database) : ICategoryRepository
         return category!;
     }
 
-    public async Task<bool> UpdateCategory(Category category)
+    public async Task<bool> UpdateCategory(int id,Category category)
     {
         using var conn=dabase.Connection();
         conn.Open();
         var query="update Category set name=@name where id=@id";
-        var res = await conn.ExecuteAsync(query,category);
+        var res = await conn.ExecuteAsync(query,new {id,category.Name});
         return res>0;
     }
 }
